@@ -8,7 +8,9 @@ export class StatusService {
   connexion:any;
   token:unknown=null;
   admin:any;
-  constructor() { }
+  constructor() { 
+    this.admin = false;
+  }
 
   deconnexion(){
     this.connexion = false;

@@ -18,7 +18,7 @@ export class AuthService {
         console.log(p);
         this.user = p ;
         this.statusServ.connexion = true;
-        if (this.user.id = "admin"){
+        if (this.user.id == "admin"){
           this.statusServ.admin = true;
         }
         if(this.user.token) this.statusServ.token = this.user.token;

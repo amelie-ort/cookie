@@ -34,6 +34,12 @@ export class CookiesService {
   }
 
   add_basket(cookie:ICookie){
-    console.log("ajouter au panier")
+    console.log(cookie.nom)
+    let hist = window.localStorage.getItem(cookie.nom)
+    window.localStorage.setItem(cookie.nom, hist != null ? String(parseInt(hist) +1) : "1" )
+  }
+  rm(){
+    window.localStorage.removeItem("cookie1")
+    window.localStorage.removeItem("cookie2")
   }
 }
