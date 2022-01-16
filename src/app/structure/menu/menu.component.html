@@ -8,10 +8,14 @@
 	<li>
 		<a routerLink='/shop'>Boutique </a>
 	</li>
-	<li>
+	<li *ngIf="statusServ.admin">
 		<a routerLink='/admin'>Admin </a>
 	</li>
-    <li style="float:right">
+	<li *ngIf="statusServ.connexion" style="float:right">
+		
+		<a class="active" routerLink='/Accueil' (click)="statusServ.deconnexion()">deconnexion</a>
+	  </li>
+    <li *ngIf="!statusServ.connexion" style="float:right">
       <a class="active" routerLink='/connexion'>connexion</a>
     </li>
 	<li *ngIf="statusServ.connexion" style="float:right">

@@ -6,6 +6,7 @@ import { BasketComponent } from './pages/basket/basket.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { ShopComponent } from './pages/shop/shop.component';
+import { AdminGuard } from './utils/securite/admin.guard';
 import { AuthGuard } from './utils/securite/auth.guard';
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'registration', component:RegistrationComponent},
   {path:'panier', component:BasketComponent, 
   canActivate:[AuthGuard]}, 
-  {path:'admin', component:AdminComponent}
+  {path:'admin', component:AdminComponent, 
+  canActivate:[AdminGuard]}
 ];
 
 @NgModule({
