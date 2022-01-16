@@ -1,0 +1,17 @@
+<section>
+    add cookie
+</section>
+<section>
+    <div>
+        <div class="row">
+            <div *ngFor='let c of adminServ.cookies | filter:term ' class="col-3">
+                <section class="product">
+                    <img [src]="c.photo">
+                    <h2>{{ c.nom }}</h2>
+                    <p> {{ c.recette}} </p>
+                    <button (click)='adminServ.delCookie(c)'> supprimer cookie</button> 
+                </section>
+            </div>
+        </div>
+    </div>
+</section>

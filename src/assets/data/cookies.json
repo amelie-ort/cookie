@@ -1,0 +1,14 @@
+[
+    {
+        "_id":0, 
+        "nom":"cookie1",
+        "photo": "cookie1.jpg",
+        "recette": "choco"
+    },
+    {
+        "_id":1, 
+        "nom":"cookie2",
+        "photo": "cookie2.jpeg",
+        "recette": "noisette"
+    }
+]

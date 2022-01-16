@@ -1,0 +1,26 @@
+<!-- <section>
+    <form>
+        <input [(ngModel)]="user.id" name="id" #test="ngModel" required (input)="getInput()" placeholder="Saisir identifiant">
+        <samp *ngIf="test.control.invalid">bonjour</samp>
+        <input [(ngModel)]="user.mdp" name="mdp" placeholder="Saisir mdp" type="password">
+        <input type="submit" value="envoyer" (click)="auth()">
+        <input type="reset" value="annuler">
+    </form>
+</section> -->
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Connexion </h2>
+      <h2 class="inactive underlineHover"> <a routerLink='/registration'> Inscription </a> </h2>
+
+      <!-- Login Form -->
+      <form>
+        <input [(ngModel)]="user.id" name="id" #test="ngModel" required (input)="getInput()" class="fadeIn second" placeholder="login">
+        <samp *ngIf="test.control.invalid">bonjour</samp>
+        <input [(ngModel)]="user.mdp" name="mdp" placeholder="Saisir mdp" type="password" class="fadeIn third" placeholder="password">
+        <input type="submit" class="fadeIn fourth" value="Log In" (click)="auth()">
+      </form>
+  
+    </div>
+</div>

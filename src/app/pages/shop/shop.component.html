@@ -1,0 +1,12 @@
+<div>
+	<div class="row">
+		<div *ngFor='let c of cookieServ.cookies | filter:term ' class="col-3">
+            <section class="product">
+                <img [src]="c.photo">
+                <h2>{{ c.nom }}</h2>
+                <p> {{ c.recette}} </p>
+                <button (click)='cookieServ.add_basket(c)'> ajouter au panier</button> 
+            </section>
+		</div>
+	</div>
+</div>

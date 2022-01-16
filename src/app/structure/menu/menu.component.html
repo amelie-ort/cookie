@@ -1,0 +1,25 @@
+<nav>
+	<ul>
+    <li>
+    </li>
+	<li>
+		<a routerLink='/'> Accueil </a>
+	</li>
+	<li>
+		<a routerLink='/shop'>Boutique </a>
+	</li>
+	<li>
+		<a routerLink='/admin'>Admin </a>
+	</li>
+    <li style="float:right">
+      <a class="active" routerLink='/connexion'>connexion</a>
+    </li>
+	<li *ngIf="statusServ.connexion" style="float:right">
+		
+		<a class="active" routerLink='/panier'><img [src]="logo_panier"></a>
+	  </li>
+	</ul>
+</nav>
+
+
+
